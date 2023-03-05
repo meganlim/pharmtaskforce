@@ -1,121 +1,134 @@
 
+<script src="https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"></script>
 
 <div id="info" class="text"></div>
 
 <div id="wrapper"><span class="label">Respiratory</span>
   <div class="branch lv1">
 
-    <div class="entry"><span class="label" id="beta"><a>Histamine-1 <br>blockers</a></span>
+    <div class="entry"><span class="label" id="h1block"><a>Histamine-1 <br>blockers</a></span>
       <div class="branch lv2">
-        <div class="entry"><span class="label" id="cardiobeta"><a>First generation</a></span>
+        <div class="entry"><span class="label" id="firstgen"><a>First generation</a></span>
         </div>
-        <div class="entry"><span class="label" id="noncardiobeta"><a>Second generation</a></span>
+        <div class="entry"><span class="label" id="secondgen"><a>Second generation</a></span>
         </div>
       </div>
     </div>
-    <div class="entry"><span class="label" id="ccb"><a>Cough <br>suppressants</a></span>
+    <div class="entry"><span class="label" id="cough"><a>Cough <br>suppressants</a></span>
       <div class="branch lv2">
-        <div class="entry"><span class="label" id="diccb"><a>Dextromethorphan</a></span>
+        <div class="entry"><span class="label" id="dextro"><a>Dextromethorphan</a></span>
         </div>
-        <div class="entry"><span class="label" id="nondiccb"><a>Codeine</a></span>
+        <div class="entry"><span class="label" id="codeine"><a>Codeine</a></span>
         </div>
       </div>
     </div>
-    <div class="entry"><span class="label" id="ccb"><a>Nasal <br>decongestants</a></span>
+    <div class="entry"><span class="label" id="nasal"><a>Nasal <br>decongestants</a></span>
       <div class="branch lv2">
-        <div class="entry"><span class="label" id="diccb"><a>Phenylephrine</a></span>
+        <div class="entry"><span class="label" id="phenyl"><a>Phenylephrine</a></span>
         </div>
-        <div class="entry"><span class="label" id="nondiccb"><a>Pseudoephedrine</a></span>
+        <div class="entry"><span class="label" id="pseudo"><a>Pseudoephedrine</a></span>
         </div>
       </div>
     </div>
-    <div class="entry"><span class="label" id="ccb"><a>Mucolytics</a></span>
+    <div class="entry"><span class="label" id="mucolytic"><a>Mucolytics</a></span>
       <div class="branch lv2">
-        <div class="entry"><span class="label" id="diccb"><a>N-acetylcysteine</a></span>
+        <div class="entry"><span class="label" id="nacetyl"><a>N-acetylcysteine</a></span>
         </div>
-        <div class="entry"><span class="label" id="nondiccb"><a>Dornase alfa</a></span>
-        </div>
-      </div>
-    </div>
-
-    <div class="entry"><span class="label" id="diuretic"><a>Asthma Tx</a></span>
-      <div class="branch lv2">
-        <div class="entry"><span class="label" id="kspare"><a>Bronchodilators</a></span>
-          <div class="branch lv2">
-            <div class="entry"><span class="label" id="aldant"><a>Beta2 agonists</a></span>
-              <div class="branch lv2">
-                <div class="entry"><span class="label" id="diccb"><a>SABA</a></span>
-                </div>
-                <div class="entry"><span class="label" id="nondiccb"><a>LABA</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="entry"><span class="label" id="enac"><a>Muscarinic antagonists</a></span>
-            </div>
-            <div class="entry"><span class="label" id="enac"><a>Methylxanthines</a></span>
-            </div>
-          </div>
-        </div>
-        <div class="entry"><span class="label" id="kspare"><a>Anti-<br>inflammatory</a></span>
-          <div class="branch lv2">
-            <div class="entry"><span class="label" id="aldant"><a>Corticosteroids</a></span>
-              <div class="branch lv2">
-                <div class="entry"><span class="label" id="diccb"><a>Oral</a></span>
-                </div>
-                <div class="entry"><span class="label" id="nondiccb"><a>Inhaled</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="entry"><span class="label" id="enac"><a>Leukotriene<br>pathway<br> modifier</a></span>
-              <div class="branch lv2">
-                <div class="entry"><span class="label" id="diccb"><a>Lipoxygenase inhibitor</a></span>
-                </div>
-                <div class="entry"><span class="label" id="nondiccb"><a>Receptor antagonists</a></span>
-                </div>
-              </div>
-            </div>
-            <div class="entry"><span class="label" id="enac"><a>Degranulation inhibitors</a></span>
-            </div>
-            <div class="entry"><span class="label" id="enac"><a>Monoclonal antibodies</a></span>
-            </div>
-          </div>
+        <div class="entry"><span class="label" id="dornase"><a>Dornase alfa</a></span>
         </div>
       </div>
     </div>
 
-      <div class="entry"><span class="label" id="lipidlowering"><a>Antibiotics</a></span>
+    <div class="entry"><span class="label" id="asthma"><a>Asthma Tx</a></span>
+      <div class="branch lv2">
+        <div class="entry"><span class="label" id="broncho"><a>Bronchodilators</a></span>
+          <div class="branch lv2">
+            <div class="entry"><span class="label" id="beta2"><a>Beta2 agonists</a></span>
+              <div class="branch lv2">
+                <div class="entry"><span class="label" id="saba"><a>SABA</a></span>
+                </div>
+                <div class="entry"><span class="label" id="laba"><a>LABA</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="entry"><span class="label" id="mantag"><a>Muscarinic antagonists</a></span>
+            </div>
+            <div class="entry"><span class="label" id="methyl"><a>Methylxanthines</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="entry"><span class="label" id="antiinflam"><a>Anti-<br>inflammatory</a></span>
+          <div class="branch lv2">
+            <div class="entry"><span class="label" id="cortico"><a>Corticosteroids</a></span>
+              <div class="branch lv2">
+                <div class="entry"><span class="label" id="oral"><a>Oral</a></span>
+                </div>
+                <div class="entry"><span class="label" id="inhaled"><a>Inhaled</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="entry"><span class="label" id="leuko"><a>Leukotriene<br>pathway<br> modifier</a></span>
+              <div class="branch lv2">
+                <div class="entry"><span class="label" id="lipoxy"><a>Lipoxygenase inhibitor</a></span>
+                </div>
+                <div class="entry"><span class="label" id="rantag"><a>Receptor antagonists</a></span>
+                </div>
+              </div>
+            </div>
+            <div class="entry"><span class="label" id="degrani"><a>Degranulation inhibitors</a></span>
+            </div>
+            <div class="entry"><span class="label" id="monoclonal"><a>Monoclonal antibodies</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="entry"><span class="label" id="antibiotics"><a>Antibiotics</a></span>
         <div class="branch lv2">
-          <div class="entry"><span class="label" id="statin"><a>cell wall <br>synthesis <br>inhibitors</a></span>
+          <div class="entry"><span class="label" id="cellwall"><a>cell wall <br>synthesis <br>inhibitors</a></span>
             <div class="branch lv2">
-              <div class="entry"><span class="label" id="cardiobeta"><a>Beta lactam</a></span>
+              <div class="entry"><span class="label" id="betalactam"><a>Beta lactam</a></span>
                 <div class="branch lv2">
-                  <div class="entry"><span class="label" id="cardiobeta"><a>Penicillin</a></span>
+                  <div class="entry"><span class="label" id="penicillin"><a>Penicillin</a></span>
                   </div>
-                  <div class="entry"><span class="label" id="noncardiobeta"><a>Cephalosporin</a></span>
+                  <div class="entry"><span class="label" id="ceph"><a>Cephalosporin</a></span>
                   </div>
-                  <div class="entry"><span class="label" id="cardiobeta"><a>Carbapenem</a></span>
+                  <div class="entry"><span class="label" id="carbapenem"><a>Carbapenem</a></span>
                   </div>
-                  <div class="entry"><span class="label" id="noncardiobeta"><a>Monobactam</a></span>
+                  <div class="entry"><span class="label" id="monobactam"><a>Monobactam</a></span>
                   </div>
                 </div>
               </div>
-              <div class="entry"><span class="label" id="noncardiobeta"><a>Glycopeptide</a></span>
+              <div class="entry"><span class="label" id="glycopeptide"><a>Glycopeptide</a></span>
               </div>
             </div>
           </div>
-          <div class="entry"><span class="label" id="bileacid"><a>protein <br>synthesis <br>inhibitors</a></span>
+          <div class="entry"><span class="label" id="proteini"><a>protein <br>synthesis <br>inhibitors</a></span>
             <div class="branch lv2">
-              <div class="entry"><span class="label" id="cardiobeta"><a>30S</a></span>
+              <div class="entry"><span class="label" id="30s"><a>30S</a></span>
+                <div class="branch lv2">
+                  <div class="entry"><span class="label" id="aminoglycoside"><a>aminoglycosides</a></span>
+                  </div>
+                  <div class="entry"><span class="label" id="tetra"><a>tetracyclines</a></span>
+                  </div>
+                </div>
               </div>
-              <div class="entry"><span class="label" id="noncardiobeta"><a>50S</a></span>
+              <div class="entry"><span class="label" id="50s"><a>50S</a></span>
+                <div class="branch lv2">
+                  <div class="entry"><span class="label" id="macrolide"><a>clindamycine,<br>macrolide</a></span>
+                  </div>
+                  <div class="entry"><span class="label" id="linezolid"><a>linezolid</a></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="entry"><span class="label" id="bileacid"><a>DNA<br> synthesis<br> inhibitors</a></span>
+          <div class="entry"><span class="label" id="dnainhib"><a>DNA<br> synthesis<br> inhibitors</a></span>
             <div class="branch lv2">
-              <div class="entry"><span class="label" id="cardiobeta"><a>Fluoroquinolones</a></span>
+              <div class="entry"><span class="label" id="fluoro"><a>Fluoroquinolones</a></span>
               </div>
-              <div class="entry"><span class="label" id="noncardiobeta"><a>Sulfonamides</a></span>
+              <div class="entry"><span class="label" id="sulfo"><a>Sulfonamides</a></span>
               </div>
             </div>
           </div>
@@ -128,36 +141,54 @@
 <script>
   var display = document.getElementById('info');
 
-  ace.addEventListener('click', function(){ display.innerHTML = "<ul><li>-prils</li><li>inhibition of ACE(converts AT1 to AT2)</li><li>decreased AT2 levels reduces peripheral resistance and afterload</li><li>decreased aldosterone decreases salt and water retention which reduces preload</li><li>decreased breakdown of bradykinin results in increased kinin activity and vasodilation</li><li>net result is decreased BP</li><li>side effect: cough due to elevated bradykinin</li></ul>";}, false);
-  arb.addEventListener('click', function(){ display.innerHTML = "<ul><li>-sartans</li><li>inhibition of AT2 receptor type 1</li><li>decreased vasoconstriction leads to decreased BP</li><li>decreased aldosterone secretion decreases Na and water reabsorption which lowers BP</li><li>no bradykinin elevation(unlike ACE-i)</li></ul>";}, false);
-  beta.addEventListener('click', function(){ display.innerHTML = "<ul><li>decreased HR</li><li>reduced contractility</li><li>reduced BP</li><li>decreases myocardial oxygen requirements at rest and during exercise</li><li></li></ul>";}, false);
-  cardiobeta.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit binding of beta 1 receptors, which are found mostly in the heart</li></ul>";}, false);
-  noncardiobeta.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit binding of beta 1 and beta 2 receptors, affecting the heart, lungs, kidneys, vascular smooth muscle, GI</li></ul>";}, false);
-  ccb.addEventListener('click', function(){ display.innerHTML = "<ul><li>blocks L-type Ca channels, present in myocardium and vascular smooth muscles</li><li>cause peripheral arterial vasodilation(drop in BP) and myocardial depression(negative chronotropic, inotropic, and dromotropic)</li><li>classified into two groups based on main site of action</li></ul>";}, false);
-  diccb.addEventListener('click', function(){ display.innerHTML = "<ul><li>potent vasodilators</li><li>Nifedipine, Amlodipine</li></ul>";}, false);
-  nondiccb.addEventListener('click', function(){ display.innerHTML = "<ul><li>potent myocardial depressants</li><li>Diltiazem, Verapamil</li></ul>";}, false);
-  diuretic.addEventListener('click', function(){ display.innerHTML = "<ul><li>increase the production of urine</li><li>categorized according to renal structures they act on, changes in volume/composition of urine, and electrolyte balance</li></ul>";}, false);
-  thi.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit Na+Cl- cotransports in DCT increasing excretion of Na+ and Cl- and causing diuresis</li><li>Hydrochlorothiazide, chlorothiazide, metolazone</li></ul>";}, false);
-  loop.addEventListener('click', function(){ display.innerHTML = "<ul><li>block Na+K+2Cl- cotransporter on thick ascending loop of Henle -> dimishing concentration gradient between renal medulla and cortex -> not able to concentrate urine -> increased diuresis</li><li>Sulfonamides: furosemide, torsemide, bumetanide</li><li>non-sulfur containing: ethacrynic acid</li></ul>";}, false);
-  kspare.addEventListener('click', function(){ display.innerHTML = "<ul><li>cause diuresis without potassium loss</li></ul>";}, false);
-  aldant.addEventListener('click', function(){ display.innerHTML = "<ul><li>competitively bind to aldosterone receptors in DCT and collecting duct -> decreased Na+ reabsorption and K+ excretion -> diuresis</li><li>spironolactone, eplerenone</li></ul>";}, false);
-  enac.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibition of LENaC in the DCT and collecting duct -> decreased Na+ reabsorption and K+ secretion -> diuresis</li><li>triamterene, amiloride</li></ul>";}, false);
-  osmo.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit water reabsorption at PCT, thin descending, collecting duct</li><li>mannitol</li></ul>";}, false);
-  cai.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit carbonic anhydrase -> increase H+ reabsorption and inhibit Na+/H+ exchange -> increase bicarb elimination -> compensatory hyperventilation -> raise oxygenation</li><li>acetazolamide</li></ul>";}, false);
-  nitrate.addEventListener('click', function(){ display.innerHTML = "<ul><li>increase release of nitric oxide(NO) in vascular smooth muscle cells -> smooth muscle relaxation and vasodilation</li><li>veins are more affected than arteries</li><li>venous pooling and decreased preload</li><li>nitroglycerin, isosorbide dinitrate, isosorbide mononitrate</li></ul>";}, false);
-  statin.addEventListener('click', function(){ display.innerHTML = "<ul><li>reduce hepatic cholesterol synthesis by inhibiting HMG-CoA reductase(which converts HMG-CoA to mevalonate) -> upregulated LDL receptors on hepatocytes -> lowers LDL cholesterol and triglyercides</li><li>Atorvastatin, Simvastatin, Pravastatin, Lovastatin</li></ul>";}, false);
-  digoxin.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibition of Na+/K+ ATPase -> inhibition of Na+/Ca2+ exchanger -> increase intracellular Ca2+ -> positive inotropy</li><li></li></ul>";}, false);
-  inotropes.addEventListener('click', function(){ display.innerHTML = "<ul><li>increase contractility of the heart</li></ul>";}, false);
-  antiarr.addEventListener('click', function(){ display.innerHTML = "<ul><li>slow/block conduction</li><li>prevent recurrent arrhythmias and restore sinus rhythm</li></ul>";}, false);
-  class1.addEventListener('click', function(){ display.innerHTML = "<ul><li>Na</li><li>decrease slope of phase 0 depolarization</li></ul>";}, false);
-  class2.addEventListener('click', function(){ display.innerHTML = "<ul><li>Beta blockers</li><li>decrease SA and AV nodal activity by decreasing cAMP and Ca2+ currents, decrease slope 4</li><li>increases PR interval</li></ul>";}, false);
-  class3.addEventListener('click', function(){ display.innerHTML = "<ul><li>K channel blockers</li><li>increases AP duration, ERP, and QT interval</li></ul>";}, false);
-  class4.addEventListener('click', function(){ display.innerHTML = "<ul><li>Ca channel blockers</li><li>decreases conduction velocity, increases ERP and PR interval</li></ul>";}, false);
-  adenosine.addEventListener('click', function(){ display.innerHTML = "<ul><li>increases K+ out of cells -> hyperpolarize the cell and decrease intracellular Ca -> decreasing AV node conduction</li><li></li></ul>";}, false);
-  ivabradine.addEventListener('click', function(){ display.innerHTML = "<ul><li>selective inhibition of funny sodium channels(If), prolonging phase 4</li><li>decreases SA node firing, reduces O2 requirement</li></ul>";}, false);
-  onea.addEventListener('click', function(){ display.innerHTML = "<ul><li>increases AP duration, effective refractory period, and QT interval</li><li>both atrial and ventricular arrhythmias</li><li>quinidine, procainamide, disopyramide</li></ul>";}, false);
-  oneb.addEventListener('click', function(){ display.innerHTML = "<ul><li>increases AP duration</li><li>ventricular arrhythmias</li><li>lidocaine</li></ul>";}, false);
-  onec.addEventListener('click', function(){ display.innerHTML = "<ul><li>prolongs ERP in AV node</li><li>atrial fibrillation</li><li>flecainide, propafenone</li></ul>";}, false);
+  asthma.addEventListener('click', function(){ display.innerHTML = "<ul><li>administer O2 prior to pharmacological Tx</li></ul>";}, false);
+  broncho.addEventListener('click', function(){ display.innerHTML = "<ul><li>parasympathetic tone</li><li>early response</li></ul>";}, false);
+  saba.addEventListener('click', function(){ display.innerHTML = "<ul><li>acute treatment</li><li>albuterol</li></ul>";}, false);
+  laba.addEventListener('click', function(){ display.innerHTML = "<ul><li>high lipid solubility allows it to concentrate in lipid bilayer of smooth muscle membranes</li><li>NOT for monotherapy</li><li>salmeterol, formoterol</li></ul>";}, false);
+  beta2.addEventListener('click', function(){ display.innerHTML = "<ul><li>beta 2 receptor of sympathetic system: bronchodilation</li></ul>";}, false);
+  mantag.addEventListener('click', function(){ display.innerHTML = "<ul><li>M3 receptor of parasympathetic system: bronchoconstriction</li><li>blocks reflex bronchoconstriction mediated by vagus nerves</li><li>Ipratroprium Bromide, Tiotropium</li></ul>";}, false);
+  methyl.addEventListener('click', function(){ display.innerHTML = "<ul><li>rarely used due to very narrow therapeutic index</li><li>ie. theophyllines</li><li>inhibit PDE(which inactivate cAMP)</li></ul>";}, false);
+  antiinflam.addEventListener('click', function(){ display.innerHTML = "<ul><li>later response</li><li>refer to leukotriene pathway</li></ul>";}, false);
+  cortico.addEventListener('click', function(){ display.innerHTML = "<ul><li>inhibit phospholipase A2 of leukotriene pathway</li></ul>";}, false);
+  oral.addEventListener('click', function(){ display.innerHTML = "<ul><li>prednisone</li></ul>";}, false);
+  inhaled.addEventListener('click', function(){ display.innerHTML = "<ul><li>budesonide</li><li>fluticosone</li></ul>";}, false);
+  leuko.addEventListener('click', function(){ display.innerHTML = "<img src='leukotriene_pathway.jpeg'>";}, false);
+  lipoxy.addEventListener('click', function(){ display.innerHTML = "<ul><li>zileuton: can cause hepatotoxicity</li></ul>";}, false);
+  rantag.addEventListener('click', function(){ display.innerHTML = "<ul><li>monteleukast</li></ul>";}, false);
+  monoclonal.addEventListener('click', function(){ display.innerHTML = "<ul><li>binds to IgE and prevents IgE from activating inflammation</li><li>Omalizumab</li></ul>";}, false);
+  degrani.addEventListener('click', function(){ display.innerHTML = "<ul><li>used for prevention, must be given prior to allergen response</li><li>inhibit activation of eosinophils and mast cells</li><li>cromolyn sodium</li></ul>";}, false);
+
+  cellwall.addEventListener('click', function(){ display.innerHTML = "<ul><li>greatest effect against gram positive due to peptidoglycan in the cell wall</li></ul>";}, false);
+  betalactam.addEventListener('click', function(){ display.innerHTML = "<ul><li>contains beta lactam ring in molecular structure</li><li>susceptible to beta lactamase, thus often paired with beta-lactamase inhibitors</li></ul>";}, false);
+  penicillin.addEventListener('click', function(){ display.innerHTML = "<ul><li>natural: Penicillin G and V</li><li>anti-staph: methicillin, oxacillin, nafcillin</li><li>extended spectrum(aminopenicillins): amoxicillin, ampicillin</li><li>combine with beta-lactamase inhibitors: clavulanic acid, avibactam, sulbactam, tazobactam</li></ul>";}, false);
+  ceph.addEventListener('click', function(){ display.innerHTML = "<ul><li>as the generation increases, coverage shifts from gram positive to gram negative and resistance to beta-lactamase</li><li>1st gen: cefazolin, cephalexin</li><li>2nd gen: intermediate spectrum</li><li>3rd gen: broad spectrum, ceftriaxone</li><li>4th gen: pseudomonas coverage, cefepime</li><li>5th gen: very broad spectrum</li><li>cross reactive hypersensitivity to PCN's</li></ul>";}, false);
+  carbapenem.addEventListener('click', function(){ display.innerHTML = "<ul><li>broadest spectrum of beta-lactams: covers gram pos, neg, anaerobes, all streptococci</li><li>preferred agent for serious infections by extended spectrum beta-lactamase pathogens</li><li>doripenem, ertapenem, impenem</li><li></li></ul>";}, false);
+  monobactam.addEventListener('click', function(){ display.innerHTML = "<ul><li>NOT useful against gram pos/anaerobes, use for gram neg aerobes</li></ul>";}, false);
+  var glycopeptideSmiles = {'vancomycin': 'CC1C(C(CC(O1)OC2C(C(C(OC2OC3=C4C=C5C=C3OC6=C(C=C(C=C6)C(C(C(=O)NC(C(=O)NC5C(=O)NC7C8=CC(=C(C=C8)O)C9=C(C=C(C=C9O)O)C(NC(=O)C(C(C1=CC(=C(O4)C=C1)Cl)O)NC7=O)C(=O)O)CC(=O)N)NC(=O)C(CC(C)C)NC)O)Cl)CO)O)O)(C)N)O'};
+  glycopeptide.addEventListener('click', function(){ display.innerHTML = "<ul><li>bind to terminal portion of growing cell wall</li><li>Vancomycin: MRSA, gram pos bacteria (not for gram neg because the outer membrane acts as a diffusion barrier for bulky molecules that are too large to pass through porin channels and affect cell wall synthesis)</li></ul>";}, false);
+  glycopeptide.addEventListener('click', function(){
+    for (let k in glycopeptideSmiles) {
+      initRDKitModule().then(function (instance) {
+        RDKitModule = instance;
+        // window.alert("version: " + RDKitModule.version());
+        var smiles = glycopeptideSmiles[k]
+        var mol = RDKitModule.get_mol(smiles);
+        var svg = mol.get_svg();
+        display.innerHTML += "<li>" + k + svg + "</li>";
+      })
+    }})
+
+  fluoro.addEventListener('click', function(){ display.innerHTML = "<ul><li>-floxacins</li><li>ciprofloxacin, levofloxacin, gemifloxacin</li><li>inhibits DNA gyrase(topoisomerase) responsible for relieving tension in DNA replication</li><li>contraindicated in pregnancy</li></ul>";}, false);
+  sulfo.addEventListener('click', function(){ display.innerHTML = "<ul><li>sulfamethoxazole/trimethoprim</li><li>inhibit formation of folic acid, which bacteria need to synthesize DNA nucleic acids</li></ul>";}, false);
+
+  aminoglycoside.addEventListener('click', function(){ display.innerHTML = "<ul><li>gentamicin, neomycin, streptomycin</li><li>causes misreading of mRNA</li><li>needs O2 to cross cell membrane, thus ineffective against anaerobes</li><li>NOT for monotherapy: must be combined with another agent(ie. beta lactam antibiotics)</li></ul>";}, false);
+  tetra.addEventListener('click', function(){ display.innerHTML = "<ul><li>block tRNA site on mRNA-ribosome complex</li><li>Doxycycline indicated for community acquired pneumonia</li></ul>";}, false);
+
+  macrolide.addEventListener('click', function(){ display.innerHTML = "<ul><li>erythromycin, azithromycin, clarithromycin</li><li>bind to peptide exit tunnel to prevent peptide chain elongation</li><li>more effective against gram pos rather than gram neg bacteria because macrolides have bulky structure that doesn't penetrate membranes in gram neg</li><li></li></ul>";}, false);
+  linezolid.addEventListener('click', function(){ display.innerHTML = "<ul><li>prevent formation of ribosomal complex</li><li>no effect on gram neg bacteria</li><li>effective against MRSA</li></ul>";}, false);
+
+  arb.addEventListener('click', function(){ display.innerHTML = "<ul><li></li><li></li><li></li><li></li></ul>";}, false);
+  arb.addEventListener('click', function(){ display.innerHTML = "<ul><li></li><li></li><li></li><li></li></ul>";}, false);
 
 </script>
 
