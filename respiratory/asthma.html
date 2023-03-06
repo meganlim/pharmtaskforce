@@ -46,7 +46,16 @@
   </div>
 </div>
 
+<h3>clinical scenario</h3>
+<p>A 14-year-old girl is brought by her parents to the physician because of recurrent episodes of <u>shortness of breath and nonproductive cough</u> over the past 3 months. She has had two episodes per week, which have resolved spontaneously with rest. Once a month, she wakes up at night with shortness of breath. Spirometry shows an <u>FVC of 95% and an FEV1 of 85%</u> of predicted. Treatment with inhaled <u>budesonide-formoterol</u> as needed is begun. Two weeks later, she is brought to the physician with acute onset of dyspnea and wheezing. Her pulse is 95/min and respirations are 32/min. What is the most appropriate <u>initial</u> pharmacotherapy?</p>
 
+<button id="answer_button">Show Answer</button>
+<div id="answer" class="answer_text"></div>
+
+<script>
+  var display = document.getElementById('answer');
+  answer_button.addEventListener('click', function(){ display.innerHTML = "<b>Albuterol</b><br>Albuterol, a rescue short-acting beta2-adrenergic agonist, is the drug of choice for acute treatment of asthma symptoms.<br>Intermittent asthma, as indicated in this clinical scenario by 'recurrent episodes of SOB and nonproductive cough', generally requires symptomatic treatment. Whereas more severe forms of asthma require long-term management including inhaled corticosteroids.";}, false);
+</script>
 
 <!-- <script>
   var display = document.getElementById('info');
@@ -89,6 +98,9 @@
 .text{
   float: right;
   width: 500px;
+}
+.answer_text{
+  padding: 10px;
 }
 a:hover {
         color: #ff0000;
